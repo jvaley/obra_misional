@@ -1,0 +1,1092 @@
+/* =====================================================
+   PLAN DE BARRIO MISIONAL — Design System
+   Paleta: Azul Institucional (#0066FF)
+   Tipografía: Montserrat (Google Fonts)
+   Iconos: Material Symbols Rounded
+   ===================================================== */
+
+:root {
+    --color-50: #E6F0FF;
+    --color-100: #B8D4FF;
+    --color-200: #8AB9FF;
+    --color-300: #5C9DFF;
+    --color-400: #2E82FF;
+    --color-500: #0066FF;
+    --color-600: #0054D1;
+    --color-700: #0041A3;
+    --color-800: #002F75;
+    --color-900: #002357;
+    --color-950: #000A1A;
+
+    --surface: #F4F7FF;
+    --surface-card: #FFFFFF;
+    --border: #D6E4FF;
+    --text-primary: var(--color-950);
+    --text-secondary: #4A5568;
+    --text-muted: #A0AEC0;
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+    --shadow-card: 0 2px 12px rgba(0, 66, 255, 0.08);
+    --shadow-hover: 0 8px 32px rgba(0, 66, 255, 0.15);
+    --shadow-modal: 0 24px 80px rgba(0, 35, 87, 0.20);
+    --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =====================================================
+   BASE
+   ===================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--surface);
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+/* Lucide SVG inline icons */
+[data-lucide],
+svg.lucide {
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+/* Icon containers */
+.icon-sm {
+    width: 14px;
+    height: 14px;
+}
+
+.icon-md {
+    width: 18px;
+    height: 18px;
+}
+
+.icon-lg {
+    width: 22px;
+    height: 22px;
+}
+
+.icon-xl {
+    width: 28px;
+    height: 28px;
+}
+
+/* =====================================================
+   COMPONENTS
+   ===================================================== */
+
+/* Cards */
+.card {
+    background: var(--surface-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+/* Inputs subrayados */
+.input-underlined,
+input[type="date"].input-underlined,
+input[type="time"].input-underlined,
+input[type="datetime-local"].input-underlined {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--border);
+    width: 100%;
+    padding: 8px 4px;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: var(--text-primary);
+    transition: border-color 0.25s;
+}
+
+.input-underlined:focus,
+input[type="date"].input-underlined:focus,
+input[type="time"].input-underlined:focus,
+input[type="datetime-local"].input-underlined:focus {
+    border-color: var(--color-500);
+}
+
+.input-underlined::placeholder {
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+select.input-underlined {
+    cursor: pointer;
+}
+
+/* Progress bar */
+.progress-bar {
+    height: 8px;
+    background: var(--color-50);
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-500), var(--color-400));
+    border-radius: 99px;
+    transition: width 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Botones */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--color-500);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 99px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 16px rgba(0, 102, 255, 0.3);
+}
+
+.btn-primary:hover {
+    background: var(--color-600);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(0, 102, 255, 0.4);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--color-50);
+    color: var(--color-700);
+    border: 1.5px solid var(--color-100);
+    padding: 10px 20px;
+    border-radius: 99px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-secondary:hover {
+    background: var(--color-100);
+    border-color: var(--color-300);
+}
+
+.btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: transparent;
+    color: var(--text-muted);
+    border: none;
+    padding: 8px;
+    border-radius: var(--radius-sm);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-ghost:hover {
+    background: var(--color-50);
+    color: var(--color-700);
+}
+
+/* Section Labels */
+.section-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-600);
+}
+
+.section-subtitle {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+/* =====================================================
+   LEADER / AGENDA ICON BUTTONS
+   ===================================================== */
+.icon-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    transition: var(--transition);
+}
+
+.icon-btn-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: var(--radius-lg);
+    background: white;
+    border: 1.5px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+    color: var(--color-600);
+}
+
+.icon-btn:hover .icon-btn-circle {
+    background: var(--color-500);
+    border-color: var(--color-500);
+    color: white;
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px);
+}
+
+.icon-btn-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    transition: color 0.25s;
+    text-align: center;
+    max-width: 80px;
+}
+
+.icon-btn:hover .icon-btn-label {
+    color: var(--color-600);
+}
+
+/* Variantes de color para liderazgo */
+.icon-btn.green:hover .icon-btn-circle {
+    background: #059669;
+    border-color: #059669;
+}
+
+.icon-btn.green:hover .icon-btn-label {
+    color: #059669;
+}
+
+.icon-btn.amber:hover .icon-btn-circle {
+    background: #D97706;
+    border-color: #D97706;
+}
+
+.icon-btn.amber:hover .icon-btn-label {
+    color: #D97706;
+}
+
+.icon-btn.purple:hover .icon-btn-circle {
+    background: #7C3AED;
+    border-color: #7C3AED;
+}
+
+.icon-btn.purple:hover .icon-btn-label {
+    color: #7C3AED;
+}
+
+/* =====================================================
+   AGENDA CARDS (Larger clickable cards for Agendas section)
+   ===================================================== */
+.agenda-card {
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-card);
+    width: 160px;
+}
+
+.agenda-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-300);
+}
+
+.agenda-card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-md);
+    background: var(--color-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-600);
+    font-size: 28px;
+    transition: var(--transition);
+}
+
+.agenda-card:hover .agenda-card-icon {
+    background: var(--color-500);
+    color: white;
+}
+
+.agenda-card-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+}
+
+.agenda-card-sub {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+/* =====================================================
+   MODAL
+   ===================================================== */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 35, 87, 0.6);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-container {
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-modal);
+    width: 100%;
+    overflow-y: auto;
+    position: relative;
+    animation: modalIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: scale(0.92) translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Modal Header con franja de color */
+.modal-header {
+    background: linear-gradient(135deg, var(--color-700), var(--color-500));
+    padding: 24px 28px;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.modal-header-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.modal-header-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+}
+
+.modal-header-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.01em;
+}
+
+.modal-header-sub {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 2px;
+}
+
+.modal-header-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.modal-close-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.modal-close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.modal-pdf-btn {
+    background: rgba(255, 255, 255, 0.20);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    padding: 8px 16px;
+    border-radius: 99px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.modal-pdf-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.modal-body {
+    padding: 28px;
+}
+
+/* Agenda section blocks */
+.agenda-section {
+    margin-bottom: 24px;
+}
+
+.agenda-section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    padding: 12px 16px;
+    background: var(--color-50);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--color-500);
+}
+
+.agenda-section-number {
+    width: 26px;
+    height: 26px;
+    background: var(--color-500);
+    color: white;
+    border-radius: 99px;
+    font-size: 12px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.agenda-section-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-800);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.agenda-section-time {
+    margin-left: auto;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: white;
+    padding: 3px 10px;
+    border-radius: 99px;
+    border: 1px solid var(--border);
+}
+
+.agenda-section-body {
+    padding: 0 4px 0 16px;
+}
+
+.field-group {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.field-group.cols-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.field-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-600);
+    margin-bottom: 4px;
+    display: block;
+}
+
+/* Tracking card for amigos */
+.tracking-card {
+    background: var(--color-50);
+    border: 1.5px solid var(--color-100);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    position: relative;
+    transition: var(--transition);
+}
+
+.tracking-card:hover {
+    border-color: var(--color-300);
+    box-shadow: 0 4px 16px rgba(0, 102, 255, 0.1);
+}
+
+.tracking-card-delete {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: none;
+    padding: 4px;
+    border-radius: 99px;
+    transition: var(--transition);
+}
+
+.tracking-card:hover .tracking-card-delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tracking-card-delete:hover {
+    background: #FEE2E2;
+    color: #EF4444;
+}
+
+.btn-add-card {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: 2px dashed var(--color-200);
+    color: var(--color-500);
+    padding: 14px 20px;
+    border-radius: var(--radius-md);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-add-card:hover {
+    background: var(--color-50);
+    border-color: var(--color-400);
+}
+
+/* =====================================================
+   BAPTISM PROGRAM (Print-first document style)
+   ===================================================== */
+.baptism-header-doc {
+    text-align: center;
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 28px;
+}
+
+.baptism-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--color-900);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.baptism-subtitle {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.baptism-candidate-name {
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-700);
+    width: 100%;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid var(--color-300);
+    padding: 8px 0;
+    outline: none;
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.baptism-candidate-name::placeholder {
+    color: var(--color-200);
+}
+
+.program-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--color-50);
+}
+
+.program-row-label {
+    width: 200px;
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.program-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 0;
+    color: var(--color-600);
+}
+
+.program-divider-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-300), transparent);
+}
+
+.program-divider-text {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-600);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* =====================================================
+   PRINT STYLES — Clean document on export
+   ===================================================== */
+.institucional-header {
+    display: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+@media print {
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .no-print,
+    nav,
+    footer,
+    .modal-header-actions,
+    button,
+    [data-lucide],
+    svg.lucide,
+    .agenda-section-time {
+        display: none !important;
+    }
+
+    /* Ocultar tablero principal si se está imprimiendo un modal */
+    body.modal-is-open main {
+        display: none !important;
+    }
+
+    /* Ocultar modales por defecto en impresión a menos que se esté dentro de uno */
+    body:not(.modal-is-open) .modal {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 11pt;
+        padding: 0;
+        margin: 0;
+    }
+
+    .modal.active {
+        position: static !important;
+        display: block !important;
+        background: white !important;
+        backdrop-filter: none !important;
+        padding: 0 !important;
+        z-index: auto !important;
+        visibility: visible !important;
+    }
+
+    .modal-container {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+        width: 100% !important;
+    }
+
+    .modal-header {
+        background: none !important;
+        border-bottom: 2px solid black !important;
+        border-radius: 0 !important;
+        color: black !important;
+        padding: 12pt 0 8pt 0;
+    }
+
+    .modal-header-title,
+    .modal-header-sub {
+        color: black !important;
+    }
+
+    .modal-header-icon {
+        background: none !important;
+        color: black !important;
+        border: 1px solid black;
+    }
+
+    .modal-body {
+        padding: 16pt 0;
+    }
+
+    .agenda-section-header {
+        background: #f0f0f0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        break-inside: avoid;
+    }
+
+    .agenda-section-number {
+        background: black !important;
+        color: white !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .tracking-card {
+        background: #f9f9f9 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        break-inside: avoid;
+    }
+
+    .tracking-card-delete,
+    .btn-add-card,
+    .no-print {
+        display: none !important;
+    }
+
+    .input-underlined,
+    input[type="date"].input-underlined,
+    input[type="time"].input-underlined,
+    input[type="datetime-local"].input-underlined {
+        border-bottom: 1px solid #000 !important;
+        color: black !important;
+        padding-bottom: 2pt !important;
+    }
+
+    input::-webkit-calendar-picker-indicator {
+        display: none !important;
+        -webkit-appearance: none;
+    }
+
+    select.input-underlined {
+        appearance: none;
+        -webkit-appearance: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    span,
+    p,
+    input,
+    textarea,
+    label {
+        color: black !important;
+    }
+
+    .institucional-header {
+        display: block !important;
+        margin-bottom: 30pt;
+        border-bottom: 1.5pt solid black;
+        padding-bottom: 12pt;
+        text-align: center;
+        width: 100%;
+        break-before: always;
+    }
+
+    .institucional-header div:first-child {
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        margin-bottom: 8pt;
+    }
+
+    .institucional-header h1 {
+        font-weight: 800;
+        margin: 10pt 0;
+        font-size: 18pt !important;
+    }
+
+    .program-divider-text {
+        color: #000 !important;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-bottom: 1px solid #000;
+        padding: 4pt 10pt;
+    }
+
+    @page {
+        margin: 2cm;
+    }
+}
+
+/* =====================================================
+   ESTILOS PARA EXPORTACIÓN PDF (Ventana Aislada)
+   ===================================================== */
+.is-exporting-pdf {
+    background: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Ocultar elementos innecesarios */
+.is-exporting-pdf .no-print,
+.is-exporting-pdf .modal-header-actions,
+.is-exporting-pdf button,
+.is-exporting-pdf .agenda-section-time,
+.is-exporting-pdf .tracking-card-delete,
+.is-exporting-pdf .btn-secondary,
+.is-exporting-pdf .icon-btn-circle,
+.is-exporting-pdf nav,
+.is-exporting-pdf footer {
+    display: none !important;
+}
+
+.is-exporting-pdf .institucional-header {
+    display: block !important;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid black;
+    padding-bottom: 15px;
+}
+
+.is-exporting-pdf .modal {
+    position: relative !important;
+    display: block !important;
+    background: white !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+
+.is-exporting-pdf .modal-container {
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    overflow: visible !important;
+    max-height: none !important;
+    height: auto !important;
+    transform: none !important;
+    animation: none !important;
+}
+
+.is-exporting-pdf .tracking-card {
+    break-inside: avoid !important;
+    border: 1px solid #eee !important;
+    margin-bottom: 15px !important;
+}
+
+.is-exporting-pdf .input-underlined {
+    border-bottom: 1px solid #000 !important;
+    color: black !important;
+    background: transparent !important;
+}
+
+.is-exporting-pdf h1, 
+.is-exporting-pdf h2, 
+.is-exporting-pdf h3, 
+.is-exporting-pdf p, 
+.is-exporting-pdf span,
+.is-exporting-pdf label,
+.is-exporting-pdf input {
+    color: black !important;
+}
+
+/* Lógica de ocultar secciones automáticas */
+.is-exporting-plan #section-liderazgo, 
+.is-exporting-plan #section-agendas { 
+    display: none !important; 
+}
+
+/* Evitar que las secciones se corten entre hojas */
+.is-exporting-pdf .card, 
+.is-exporting-pdf .tracking-card, 
+.is-exporting-pdf .agenda-section, 
+.is-exporting-pdf .metas-container, 
+.is-exporting-pdf .program-divider {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    margin-bottom: 24pt !important;
+}
+
+.is-exporting-pdf .card {
+    box-shadow: none !important;
+    border: 1px solid #E2E8F0 !important;
+    background: white !important;
+}
+
+/* Títulos de secciones en el PDF */
+.is-exporting-pdf .section-header, 
+.is-exporting-pdf .section-label {
+    color: black !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 12pt;
+}
+
+/* Matriz de acciones - Ancho completo */
+.is-exporting-pdf #section-matriz { 
+    width: 100% !important; 
+    margin: 0 !important; 
+}
+
+.is-exporting-pdf table { 
+    width: 100% !important; 
+    border-collapse: collapse; 
+}
+
+.is-exporting-pdf th, 
+.is-exporting-pdf td { 
+    border: 1px solid #CBD5E1 !important; 
+    padding: 8pt !important; 
+    text-align: left !important; 
+}
+
+.is-exporting-pdf th { 
+    background-color: #F8FAFC !important; 
+    color: black !important; 
+}
+
+.is-exporting-pdf input, 
+.is-exporting-pdf textarea, 
+.is-exporting-pdf select {
+    color: black !important;
+    border-bottom: 1px solid #CBD5E1 !important;
+    background: transparent !important;
+    font-weight: 600 !important;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 640px) {
+    .modal-container {
+        border-radius: var(--radius-lg) !important;
+        margin: 8px;
+    }
+
+    .modal-header {
+        padding: 16px 20px;
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+
+    .modal-body {
+        padding: 16px 20px;
+    }
+
+    .field-group.cols-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .program-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .program-row-label {
+        width: auto;
+    }
+
+    .agenda-card {
+        width: 140px;
+    }
+}
