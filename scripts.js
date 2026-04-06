@@ -204,22 +204,72 @@ async function previewPDF(elementId, fileName) {
 
     window.lucide && window.lucide.createIcons({ nodes: [iframe.contentDocument.body] });
 
-    // Dar tiempo a fuentes/iconos para cargar en el iframe
-    await new Promise(r => setTimeout(r, 500));
+    // === CORRECCIONES DOM PARA EL PDF ===
+    const iDoc = iframe.contentDocument;
+
+    // 1. Reemplazar cada textarea de la tabla con un <div> que muestre TODA la accion
+    iDoc.querySelectorAll('td textarea').forEach(ta => {
+        const text = ta.value || ta.innerHTML || ta.textContent || '';
+        const div = iDoc.createElement('div');
+        div.textContent = text;
+        div.style.cssText = [
+            'font-family:Montserrat,sans-serif',
+            'font-size:12px',
+            'font-weight:600',
+            'color:black',
+            'white-space:pre-wrap',
+            'word-break:break-word',
+            'line-height:1.5',
+            'width:100%',
+            'min-height:0',
+            'overflow:visible'
+        ].join(';');
+        ta.parentNode.replaceChild(div, ta);
+    });
+
+    // 2. Celdas sin truncado
+    iDoc.querySelectorAll('td, th').forEach(cell => {
+        cell.style.setProperty('word-break', 'break-word', 'important');
+        cell.style.setProperty('white-space', 'normal', 'important');
+        cell.style.setProperty('overflow', 'visible', 'important');
+        cell.style.setProperty('vertical-align', 'top', 'important');
+    });
+
+    // 3. Forzar toda la Matriz de Acciones a la hoja 2
+    // A4 794px × 1123px a 96dpi; márgenes top 15mm+bottom 20mm = 142px; contenido = 981px
+    // Con iframe 850px (A4 210mm ratio): 1px = 210/850 mm → contenido 262mm ÷ 0.247 = 1061px
+    const PAGE_H = 1061;
+    const allSections = iDoc.querySelectorAll('.print-container > section, main > section');
+    if (allSections.length > 1) {
+        const lastSect = allSections[allSections.length - 1];
+        const container = lastSect.parentNode;
+        const wrapper = iDoc.createElement('div');
+        // overflow:hidden evita colapso de márgenes que expanda el wrapper
+        wrapper.style.cssText = `min-height:${PAGE_H}px;display:block;overflow:hidden;`;
+        const siblings = Array.from(container.children);
+        const lastIdx = siblings.indexOf(lastSect);
+        container.insertBefore(wrapper, lastSect);
+        for (let i = 0; i < lastIdx; i++) {
+            wrapper.appendChild(siblings[i]);
+        }
+    }
+
+    // Dar tiempo a DOM para renderizar
+    await new Promise(r => setTimeout(r, 700));
 
     // 3. CONFIGURACIÓN html2pdf
     const opt = {
-      margin:       [15, 15, 20, 15],
-      filename:     fileName + '.pdf',
-      image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { 
-          scale: 2, 
-          useCORS: true, 
-          backgroundColor: '#ffffff',
-          scrollY: 0, // CRÍTICO: ignora el scroll de la ventana principal para evitar espacios vacíos arriba
-          scrollX: 0
-      },
-      jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        margin: [15, 15, 20, 15],
+        filename: fileName + '.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: {
+            scale: 2,
+            useCORS: true,
+            backgroundColor: '#ffffff',
+            scrollY: 0, // CRÍTICO: ignora el scroll de la ventana principal para evitar espacios vacíos arriba
+            scrollX: 0
+        },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
 
     // 4. GENERAR PDF

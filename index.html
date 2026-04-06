@@ -5,32 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plan Misional — Barrio Milagro</title>
-    <meta name="description" content="Dashboard misional operativo del Barrio Milagro. Seguimiento de metas, coordinación misional y agendas para líderes.">
+    <meta name="description"
+        content="Dashboard misional operativo del Barrio Milagro. Seguimiento de metas, coordinación misional y agendas para líderes.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
     <!-- NAV -->
-    <nav class="no-print" style="position:fixed;top:0;left:0;right:0;height:60px;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid #E6F0FF;z-index:500;display:flex;align-items:center;padding:0 24px;">
-        <div style="max-width:1200px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;">
+    <nav class="no-print"
+        style="position:fixed;top:0;left:0;right:0;height:60px;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid #E6F0FF;z-index:500;display:flex;align-items:center;padding:0 24px;">
+        <div
+            style="max-width:1200px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;">
             <div style="display:flex;align-items:center;gap:12px;">
-                <div style="width:36px;height:36px;background:linear-gradient(135deg,#0041A3,#0066FF);border-radius:10px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,102,255,0.25);">
+                <div
+                    style="width:36px;height:36px;background:linear-gradient(135deg,#0041A3,#0066FF);border-radius:10px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,102,255,0.25);">
                     <i data-lucide="landmark" style="width:18px;height:18px;color:white;stroke-width:2;"></i>
                 </div>
                 <div>
                     <div style="font-size:13px;font-weight:800;color:#000A1A;display:flex;align-items:center;gap:6px;">
                         Plan Misional Operativo
-                        <button onclick="openModal('modal-info-plan')" title="¿Qué es un Plan Misional?" style="background:none;border:none;cursor:pointer;color:#0066FF;display:flex;align-items:center;padding:2px;">
+                        <button onclick="openModal('modal-info-plan')" title="¿Qué es un Plan Misional?"
+                            style="background:none;border:none;cursor:pointer;color:#0066FF;display:flex;align-items:center;padding:2px;">
                             <i data-lucide="info" style="width:15px;height:15px;stroke-width:2;"></i>
                         </button>
                     </div>
-                    <div style="font-size:10px;font-weight:600;color:#0066FF;letter-spacing:0.08em;text-transform:uppercase;">Barrio Milagro · Manual 23</div>
+                    <div
+                        style="font-size:10px;font-weight:600;color:#0066FF;letter-spacing:0.08em;text-transform:uppercase;">
+                        Barrio Milagro · Manual 23</div>
                 </div>
             </div>
-            <button onclick="previewPDF('main-plan-content', 'Plan-Misional-Barrio')" class="btn-primary" style="font-size:11px;padding:8px 16px;">
+            <button onclick="previewPDF('main-plan-content', 'Plan-Misional-Barrio')" class="btn-primary"
+                style="font-size:11px;padding:8px 16px;">
                 <i data-lucide="download" style="width:14px;height:14px;stroke-width:2.5;"></i>
                 Exportar PDF
             </button>
@@ -39,12 +48,14 @@
 
     <!-- MAIN -->
     <main id="main-plan-content" style="max-width:1200px;margin:0 auto;padding:80px 24px 48px;">
-        
+
         <!-- Header PDF only -->
         <div class="institucional-header">
-            <div style="font-size:9pt;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4pt;">La Iglesia de Jesucristo de los Santos de los Últimos Días</div>
+            <div style="font-size:9pt;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4pt;">La Iglesia de
+                Jesucristo de los Santos de los Últimos Días</div>
             <h1 style="font-size:20pt;text-transform:uppercase;letter-spacing:0.06em;">Plan Misional Operativo</h1>
-            <div style="font-size:10pt;font-weight:600;color:black;margin-top:4pt;">Barrio Milagro · Estaca Milagro</div>
+            <div style="font-size:10pt;font-weight:600;color:black;margin-top:4pt;">Barrio Milagro · Estaca Milagro
+            </div>
         </div>
 
         <!-- METAS -->
@@ -54,7 +65,8 @@
                 <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;">
                     <div>
                         <div class="section-label" style="color:#0066FF;">Bautismos</div>
-                        <div style="font-size:10px;color:var(--text-muted);margin-top:2px;font-weight:500;">Meta Anual</div>
+                        <div style="font-size:10px;color:var(--text-muted);margin-top:2px;font-weight:500;">Meta Anual
+                        </div>
                     </div>
                     <div style="background:var(--color-50);border-radius:10px;padding:8px;color:var(--color-500);">
                         <i data-lucide="droplets" style="width:20px;height:20px;stroke-width:1.75;"></i>
@@ -65,14 +77,17 @@
                         style="font-size:38px;font-weight:900;color:var(--color-950);width:65px;border:none;outline:none;background:transparent;font-family:'Montserrat',sans-serif;">
                     <span style="font-size:15px;font-weight:500;color:var(--text-muted);">/ 18</span>
                 </div>
-                <div class="progress-bar"><div id="bar-bautismos" class="progress-fill" style="width:22%"></div></div>
+                <div class="progress-bar">
+                    <div id="bar-bautismos" class="progress-fill" style="width:22%"></div>
+                </div>
             </div>
 
             <div class="card" style="padding:22px;border-top:3px solid #059669;">
                 <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;">
                     <div>
                         <div class="section-label" style="color:#059669;">Lecciones con Miembro</div>
-                        <div style="font-size:10px;color:var(--text-muted);margin-top:2px;font-weight:500;">Meta Semanal</div>
+                        <div style="font-size:10px;color:var(--text-muted);margin-top:2px;font-weight:500;">Meta Semanal
+                        </div>
                     </div>
                     <div style="background:#ECFDF5;border-radius:10px;padding:8px;color:#059669;">
                         <i data-lucide="book-open" style="width:20px;height:20px;stroke-width:1.75;"></i>
@@ -83,14 +98,18 @@
                         style="font-size:38px;font-weight:900;color:var(--color-950);width:65px;border:none;outline:none;background:transparent;font-family:'Montserrat',sans-serif;">
                     <span style="font-size:15px;font-weight:500;color:var(--text-muted);">/ 12</span>
                 </div>
-                <div class="progress-bar"><div id="bar-lecciones" class="progress-fill" style="width:66%;background:linear-gradient(90deg,#059669,#34D399);"></div></div>
+                <div class="progress-bar">
+                    <div id="bar-lecciones" class="progress-fill"
+                        style="width:66%;background:linear-gradient(90deg,#059669,#34D399);"></div>
+                </div>
             </div>
 
             <div class="card" style="padding:22px;border-top:3px solid #D97706;">
                 <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;">
                     <div>
                         <div class="section-label" style="color:#D97706;">Referencias</div>
-                        <div style="font-size:10px;color:var(--text-muted);margin-top:2px;font-weight:500;">2 por Organización / Mes</div>
+                        <div style="font-size:10px;color:var(--text-muted);margin-top:2px;font-weight:500;">2 por
+                            Organización / Mes</div>
                     </div>
                     <div style="background:#FFFBEB;border-radius:10px;padding:8px;color:#D97706;">
                         <i data-lucide="user-plus" style="width:20px;height:20px;stroke-width:1.75;"></i>
@@ -101,7 +120,10 @@
                         style="font-size:38px;font-weight:900;color:var(--color-950);width:65px;border:none;outline:none;background:transparent;font-family:'Montserrat',sans-serif;">
                     <span style="font-size:15px;font-weight:500;color:var(--text-muted);">/ 10</span>
                 </div>
-                <div class="progress-bar"><div id="bar-ref" class="progress-fill" style="width:0%;background:linear-gradient(90deg,#D97706,#FCD34D);"></div></div>
+                <div class="progress-bar">
+                    <div id="bar-ref" class="progress-fill"
+                        style="width:0%;background:linear-gradient(90deg,#D97706,#FCD34D);"></div>
+                </div>
             </div>
 
         </div>
@@ -111,7 +133,8 @@
             <div class="card" style="padding:28px;">
                 <div style="margin-bottom:24px;">
                     <div class="section-label">Liderazgo de la Obra</div>
-                    <div class="section-subtitle" style="margin-top:4px;">Haz clic para ver responsabilidades del Manual General</div>
+                    <div class="section-subtitle" style="margin-top:4px;">Haz clic para ver responsabilidades del Manual
+                        General</div>
                 </div>
                 <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;">
 
@@ -179,7 +202,8 @@
         <!-- MATRIZ DE ACCIONES -->
         <section style="margin-bottom:32px;">
             <div class="card" style="padding:24px;">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px;">
+                <div
+                    style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px;">
                     <div>
                         <div class="section-label">Matriz de Acciones</div>
                         <div class="section-subtitle" style="margin-top:3px;">Manual 4.4.5 — Registro de acuerdos</div>
@@ -193,68 +217,137 @@
                     <table style="width:100%;border-collapse:collapse;">
                         <thead>
                             <tr style="border-bottom:1px solid var(--border);">
-                                <th style="text-align:left;padding:8px 12px;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);width:45%;">Acción</th>
-                                <th style="text-align:left;padding:8px 12px;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);">Responsable</th>
-                                <th style="text-align:left;padding:8px 12px;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);">Plazo</th>
-                                <th style="text-align:center;padding:8px 12px;font-size:10px;font-weight:700;color:var(--text-muted);">✓</th>
+                                <th
+                                    style="text-align:left;padding:8px 12px;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);width:45%;">
+                                    Acción</th>
+                                <th
+                                    style="text-align:left;padding:8px 12px;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);">
+                                    Responsable</th>
+                                <th
+                                    style="text-align:left;padding:8px 12px;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);">
+                                    Plazo</th>
+                                <th
+                                    style="text-align:center;padding:8px 12px;font-size:10px;font-weight:700;color:var(--text-muted);">
+                                    ✓</th>
                             </tr>
                         </thead>
                         <tbody id="actions-table">
                             <!-- 1 -->
                             <tr style="border-bottom:1px solid var(--color-50);">
-                                <td style="padding:11px 12px;"><textarea style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;" rows="2">Ver a detalle cada miembro de la senda de los convenios</textarea></td>
-                                <td style="padding:11px 12px;"><input type="text" style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;"></td>
-                                <td style="padding:11px 12px;"><input type="date" style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;"></td>
-                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox" style="width:15px;height:15px;accent-color:var(--color-500);"></td>
+                                <td style="padding:11px 12px;"><textarea
+                                        style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;"
+                                        rows="2">Ver a detalle cada miembro de la senda de los convenios</textarea></td>
+                                <td style="padding:11px 12px;"><input type="text"
+                                        style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;">
+                                </td>
+                                <td style="padding:11px 12px;"><input type="date"
+                                        style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;">
+                                </td>
+                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox"
+                                        style="width:15px;height:15px;accent-color:var(--color-500);"></td>
                             </tr>
                             <!-- 2 -->
                             <tr style="border-bottom:1px solid var(--color-50);">
-                                <td style="padding:11px 12px;"><textarea style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;" rows="3">Por mes tener una actividad misional de barrio que sea en rotación por organización el líder misional se encarga de distribuir la asignación de actividad.</textarea></td>
-                                <td style="padding:11px 12px;"><input type="text" style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;"></td>
-                                <td style="padding:11px 12px;"><input type="date" style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;"></td>
-                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox" style="width:15px;height:15px;accent-color:var(--color-500);"></td>
+                                <td style="padding:11px 12px;"><textarea
+                                        style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;"
+                                        rows="3">Por mes tener una actividad misional de barrio que sea en rotación por organización el líder misional se encarga de distribuir la asignación de actividad.</textarea>
+                                </td>
+                                <td style="padding:11px 12px;"><input type="text"
+                                        style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;">
+                                </td>
+                                <td style="padding:11px 12px;"><input type="date"
+                                        style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;">
+                                </td>
+                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox"
+                                        style="width:15px;height:15px;accent-color:var(--color-500);"></td>
                             </tr>
                             <!-- 3 -->
                             <tr style="border-bottom:1px solid var(--color-50);">
-                                <td style="padding:11px 12px;"><textarea style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;" rows="2">Salir con los misioneros - Misioneros preparados</textarea></td>
-                                <td style="padding:11px 12px;"><input type="text" style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;"></td>
-                                <td style="padding:11px 12px;"><input type="date" style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;"></td>
-                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox" style="width:15px;height:15px;accent-color:var(--color-500);"></td>
+                                <td style="padding:11px 12px;"><textarea
+                                        style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;"
+                                        rows="2">Salir con los misioneros - Misioneros preparados</textarea></td>
+                                <td style="padding:11px 12px;"><input type="text"
+                                        style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;">
+                                </td>
+                                <td style="padding:11px 12px;"><input type="date"
+                                        style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;">
+                                </td>
+                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox"
+                                        style="width:15px;height:15px;accent-color:var(--color-500);"></td>
                             </tr>
                             <!-- 4 -->
                             <tr style="border-bottom:1px solid var(--color-50);">
-                                <td style="padding:11px 12px;"><textarea style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;" rows="2">Fortalecer la enseñanza de los principios para los miembros</textarea></td>
-                                <td style="padding:11px 12px;"><input type="text" style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;"></td>
-                                <td style="padding:11px 12px;"><input type="date" style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;"></td>
-                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox" style="width:15px;height:15px;accent-color:var(--color-500);"></td>
+                                <td style="padding:11px 12px;"><textarea
+                                        style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;"
+                                        rows="2">Fortalecer la enseñanza de los principios para los miembros</textarea>
+                                </td>
+                                <td style="padding:11px 12px;"><input type="text"
+                                        style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;">
+                                </td>
+                                <td style="padding:11px 12px;"><input type="date"
+                                        style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;">
+                                </td>
+                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox"
+                                        style="width:15px;height:15px;accent-color:var(--color-500);"></td>
                             </tr>
                             <!-- 5 -->
                             <tr style="border-bottom:1px solid var(--color-50);">
-                                <td style="padding:11px 12px;"><textarea style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;" rows="2">Impartir cada domingo la clase principios del evangelio</textarea></td>
-                                <td style="padding:11px 12px;"><input type="text" style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;"></td>
-                                <td style="padding:11px 12px;"><input type="date" style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;"></td>
-                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox" style="width:15px;height:15px;accent-color:var(--color-500);"></td>
+                                <td style="padding:11px 12px;"><textarea
+                                        style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;"
+                                        rows="2">Impartir cada domingo la clase principios del evangelio</textarea></td>
+                                <td style="padding:11px 12px;"><input type="text"
+                                        style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;">
+                                </td>
+                                <td style="padding:11px 12px;"><input type="date"
+                                        style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;">
+                                </td>
+                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox"
+                                        style="width:15px;height:15px;accent-color:var(--color-500);"></td>
                             </tr>
                             <!-- 6 -->
                             <tr style="border-bottom:1px solid var(--color-50);">
-                                <td style="padding:11px 12px;"><textarea style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;" rows="3">En cada reunion de consejo de barrio recibir dos referencias por organización, en el drive hay un documento.</textarea></td>
-                                <td style="padding:11px 12px;"><input type="text" style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;"></td>
-                                <td style="padding:11px 12px;"><input type="date" style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;"></td>
-                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox" style="width:15px;height:15px;accent-color:var(--color-500);"></td>
+                                <td style="padding:11px 12px;"><textarea
+                                        style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;"
+                                        rows="3">En cada reunion de consejo de barrio recibir dos referencias por organización, en el drive hay un documento.</textarea>
+                                </td>
+                                <td style="padding:11px 12px;"><input type="text"
+                                        style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;">
+                                </td>
+                                <td style="padding:11px 12px;"><input type="date"
+                                        style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;">
+                                </td>
+                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox"
+                                        style="width:15px;height:15px;accent-color:var(--color-500);"></td>
                             </tr>
                             <!-- 7 -->
                             <tr style="border-bottom:1px solid var(--color-50);">
-                                <td style="padding:11px 12px;"><textarea style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;" rows="4">Que los misioneros tengan un documento donde estén las parejas ministrantes de cada hermano. Por trimestre ver que familias se van a enfocar para activar Q. Elderes y Soc. Soc. (6 familias).</textarea></td>
-                                <td style="padding:11px 12px;"><input type="text" style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;"></td>
-                                <td style="padding:11px 12px;"><input type="date" style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;"></td>
-                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox" style="width:15px;height:15px;accent-color:var(--color-500);"></td>
+                                <td style="padding:11px 12px;"><textarea
+                                        style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;"
+                                        rows="4">Que los misioneros tengan un documento donde estén las parejas ministrantes de cada hermano. Por trimestre ver que familias se van a enfocar para activar Q. Elderes y Soc. Soc. (6 familias).</textarea>
+                                </td>
+                                <td style="padding:11px 12px;"><input type="text"
+                                        style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;">
+                                </td>
+                                <td style="padding:11px 12px;"><input type="date"
+                                        style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;">
+                                </td>
+                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox"
+                                        style="width:15px;height:15px;accent-color:var(--color-500);"></td>
                             </tr>
                             <!-- 8 -->
                             <tr style="border-bottom:1px solid var(--color-50);">
-                                <td style="padding:11px 12px;"><textarea style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;" rows="3">Calendario de las noches de hogar con los misioneros. La familia que tenga mas noches de hogar obtiene un presente.</textarea></td>
-                                <td style="padding:11px 12px;"><input type="text" style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;"></td>
-                                <td style="padding:11px 12px;"><input type="date" style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;"></td>
-                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox" style="width:15px;height:15px;accent-color:var(--color-500);"></td>
+                                <td style="padding:11px 12px;"><textarea
+                                        style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;"
+                                        rows="3">Calendario de las noches de hogar con los misioneros. La familia que tenga mas noches de hogar obtiene un presente.</textarea>
+                                </td>
+                                <td style="padding:11px 12px;"><input type="text"
+                                        style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;">
+                                </td>
+                                <td style="padding:11px 12px;"><input type="date"
+                                        style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;">
+                                </td>
+                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox"
+                                        style="width:15px;height:15px;accent-color:var(--color-500);"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -263,14 +356,20 @@
         </section>
 
         <!-- FOOTER -->
-        <div class="no-print" style="display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--border);flex-wrap:wrap;gap:10px;">
+        <div class="no-print"
+            style="display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--border);flex-wrap:wrap;gap:10px;">
             <div style="display:flex;gap:16px;align-items:center;">
                 <a href="https://www.churchofjesuschrist.org/study/manual/sharing-the-gospel-resources-for-leaders/02-effective-coordination-with-missionaries?lang=spa"
-                   target="_blank" style="font-size:10px;font-weight:600;color:var(--text-muted);text-decoration:none;text-transform:uppercase;letter-spacing:0.08em;">Manual de Recursos</a>
+                    target="_blank"
+                    style="font-size:10px;font-weight:600;color:var(--text-muted);text-decoration:none;text-transform:uppercase;letter-spacing:0.08em;">Manual
+                    de Recursos</a>
                 <span style="color:var(--border);">·</span>
-                <a href="#" style="font-size:10px;font-weight:600;color:var(--text-muted);text-decoration:none;text-transform:uppercase;letter-spacing:0.08em;">Drive del Barrio</a>
+                <a href="#"
+                    style="font-size:10px;font-weight:600;color:var(--text-muted);text-decoration:none;text-transform:uppercase;letter-spacing:0.08em;">Drive
+                    del Barrio</a>
             </div>
-            <p style="font-size:11px;font-weight:500;color:var(--text-muted);font-style:italic;">"Amad, Compartid e Invitad"</p>
+            <p style="font-size:11px;font-weight:500;color:var(--text-muted);font-style:italic;">"Amad, Compartid e
+                Invitad"</p>
         </div>
 
     </main>
@@ -300,11 +399,16 @@
             </div>
             <div class="modal-body" style="padding:24px;">
                 <div style="font-size:13px;color:var(--text-secondary);line-height:1.75;">
-                    <p style="font-weight:700;color:var(--color-600);margin:0 0 10px;">Según el Manual General (Sección 23.5.6):</p>
-                    <p style="margin:0 0 10px;">Cada barrio debe tener un plan misional del barrio <em>sencillo</em>. Ayuda al consejo de barrio y a los misioneros a trazar metas, coordinar esfuerzos y planificar actividades.</p>
-                    <p style="margin:0;">El plan es elaborado y aprobado en el consejo de barrio bajo la dirección del obispo, adaptado a las necesidades locales.</p>
+                    <p style="font-weight:700;color:var(--color-600);margin:0 0 10px;">Según el Manual General (Sección
+                        23.5.6):</p>
+                    <p style="margin:0 0 10px;">Cada barrio debe tener un plan misional del barrio <em>sencillo</em>.
+                        Ayuda al consejo de barrio y a los misioneros a trazar metas, coordinar esfuerzos y planificar
+                        actividades.</p>
+                    <p style="margin:0;">El plan es elaborado y aprobado en el consejo de barrio bajo la dirección del
+                        obispo, adaptado a las necesidades locales.</p>
                 </div>
-                <button onclick="closeModal(null)" class="btn-primary" style="width:100%;margin-top:20px;justify-content:center;">
+                <button onclick="closeModal(null)" class="btn-primary"
+                    style="width:100%;margin-top:20px;justify-content:center;">
                     <i data-lucide="check" style="width:14px;height:14px;stroke-width:2.5;"></i>
                     Entendido
                 </button>
@@ -332,8 +436,11 @@
                 </div>
             </div>
             <div class="modal-body">
-                <p style="font-size:10px;font-weight:700;color:var(--color-600);letter-spacing:0.1em;text-transform:uppercase;margin:0 0 12px;">Responsabilidades Principales</p>
-                <ul style="font-size:13px;color:var(--text-secondary);line-height:1.8;padding-left:18px;margin:0 0 20px;">
+                <p
+                    style="font-size:10px;font-weight:700;color:var(--color-600);letter-spacing:0.1em;text-transform:uppercase;margin:0 0 12px;">
+                    Responsabilidades Principales</p>
+                <ul
+                    style="font-size:13px;color:var(--text-secondary);line-height:1.8;padding-left:18px;margin:0 0 20px;">
                     <li>Coordina la obra de miembros, líderes y misioneros de tiempo completo.</li>
                     <li>Coordina la enseñanza, bautismos y retención de miembros nuevos.</li>
                     <li>Planifica formas de ayudar a los miembros a compartir el Evangelio.</li>
@@ -368,14 +475,18 @@
                 </div>
             </div>
             <div class="modal-body">
-                <p style="font-size:10px;font-weight:700;color:#059669;letter-spacing:0.1em;text-transform:uppercase;margin:0 0 12px;">Responsabilidades</p>
-                <ul style="font-size:13px;color:var(--text-secondary);line-height:1.8;padding-left:18px;margin:0 0 20px;">
+                <p
+                    style="font-size:10px;font-weight:700;color:#059669;letter-spacing:0.1em;text-transform:uppercase;margin:0 0 12px;">
+                    Responsabilidades</p>
+                <ul
+                    style="font-size:13px;color:var(--text-secondary);line-height:1.8;padding-left:18px;margin:0 0 20px;">
                     <li>Lideran los esfuerzos diarios de compartir el Evangelio.</li>
                     <li>Aseguran que la información de miembros se actualice oportunamente.</li>
                     <li>Determinan quién actualizará Progreso en la senda de los convenios.</li>
                     <li>Asignan ministrantes a miembros nuevos y que regresan.</li>
                 </ul>
-                <button onclick="closeModal(null)" style="width:100%;background:#059669;color:white;border:none;padding:11px;border-radius:99px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;">
+                <button onclick="closeModal(null)"
+                    style="width:100%;background:#059669;color:white;border:none;padding:11px;border-radius:99px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;">
                     <i data-lucide="check" style="width:14px;height:14px;stroke-width:2.5;"></i>
                     Entendido
                 </button>
@@ -403,14 +514,18 @@
                 </div>
             </div>
             <div class="modal-body">
-                <p style="font-size:10px;font-weight:700;color:#D97706;letter-spacing:0.1em;text-transform:uppercase;margin:0 0 12px;">Responsabilidades</p>
-                <ul style="font-size:13px;color:var(--text-secondary);line-height:1.8;padding-left:18px;margin:0 0 20px;">
+                <p
+                    style="font-size:10px;font-weight:700;color:#D97706;letter-spacing:0.1em;text-transform:uppercase;margin:0 0 12px;">
+                    Responsabilidades</p>
+                <ul
+                    style="font-size:13px;color:var(--text-secondary);line-height:1.8;padding-left:18px;margin:0 0 20px;">
                     <li>Ayudan a los miembros a experimentar el gozo de compartir el Evangelio.</li>
                     <li>Enseñan mediante el ejemplo cómo amar e invitar a los demás.</li>
                     <li>Ministran a los miembros nuevos y que regresan.</li>
                     <li>Participan en las reuniones semanales de coordinación.</li>
                 </ul>
-                <button onclick="closeModal(null)" style="width:100%;background:#D97706;color:white;border:none;padding:11px;border-radius:99px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;">
+                <button onclick="closeModal(null)"
+                    style="width:100%;background:#D97706;color:white;border:none;padding:11px;border-radius:99px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;">
                     <i data-lucide="check" style="width:14px;height:14px;stroke-width:2.5;"></i>
                     Entendido
                 </button>
@@ -438,13 +553,17 @@
                 </div>
             </div>
             <div class="modal-body">
-                <p style="font-size:10px;font-weight:700;color:#7C3AED;letter-spacing:0.1em;text-transform:uppercase;margin:0 0 12px;">Participación en la Obra</p>
-                <ul style="font-size:13px;color:var(--text-secondary);line-height:1.8;padding-left:18px;margin:0 0 20px;">
+                <p
+                    style="font-size:10px;font-weight:700;color:#7C3AED;letter-spacing:0.1em;text-transform:uppercase;margin:0 0 12px;">
+                    Participación en la Obra</p>
+                <ul
+                    style="font-size:13px;color:var(--text-secondary);line-height:1.8;padding-left:18px;margin:0 0 20px;">
                     <li>Representan a la juventud del barrio en la obra misional.</li>
                     <li>Coordinan esfuerzos para invitar amigos a actividades.</li>
                     <li>Apoyan en la retención de jóvenes conversos recientes.</li>
                 </ul>
-                <button onclick="closeModal(null)" style="width:100%;background:#7C3AED;color:white;border:none;padding:11px;border-radius:99px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;">
+                <button onclick="closeModal(null)"
+                    style="width:100%;background:#7C3AED;color:white;border:none;padding:11px;border-radius:99px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;">
                     <i data-lucide="check" style="width:14px;height:14px;stroke-width:2.5;"></i>
                     Entendido
                 </button>
@@ -460,9 +579,14 @@
 
             <!-- Header PDF only -->
             <div class="institucional-header">
-                <div style="font-size:10pt;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:6pt;font-weight:600;">La Iglesia de Jesucristo de los Santos de los Últimos Días</div>
-                <h1 style="font-size:22pt;text-transform:uppercase;letter-spacing:0.04em;margin:12pt 0;font-weight:800;">Agenda de Coordinación Misional</h1>
-                <div style="display:flex;justify-content:center;gap:30pt;margin-top:15pt;font-size:11pt;font-weight:500;">
+                <div
+                    style="font-size:10pt;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:6pt;font-weight:600;">
+                    La Iglesia de Jesucristo de los Santos de los Últimos Días</div>
+                <h1
+                    style="font-size:22pt;text-transform:uppercase;letter-spacing:0.04em;margin:12pt 0;font-weight:800;">
+                    Agenda de Coordinación Misional</h1>
+                <div
+                    style="display:flex;justify-content:center;gap:30pt;margin-top:15pt;font-size:11pt;font-weight:500;">
                     <span>Barrio / Rama: _______________________</span>
                     <span>Fecha: _______________________</span>
                 </div>
@@ -472,7 +596,8 @@
             <div class="modal-header no-print" style="background:linear-gradient(135deg,#002F75,#0066FF);">
                 <div class="modal-header-info">
                     <div class="modal-header-icon">
-                        <i data-lucide="calendar-check" style="width:22px;height:22px;stroke-width:1.75;color:white;"></i>
+                        <i data-lucide="calendar-check"
+                            style="width:22px;height:22px;stroke-width:1.75;color:white;"></i>
                     </div>
                     <div>
                         <div class="modal-header-title">Agenda de Coordinación Misional</div>
@@ -480,7 +605,8 @@
                     </div>
                 </div>
                 <div class="modal-header-actions">
-                    <button onclick="previewPDF('modal-agenda-coordinacion', 'Agenda-Coordinacion')" class="modal-pdf-btn">
+                    <button onclick="previewPDF('modal-agenda-coordinacion', 'Agenda-Coordinacion')"
+                        class="modal-pdf-btn">
                         <i data-lucide="download" style="width:14px;height:14px;stroke-width:2;"></i>
                         Exportar PDF
                     </button>
@@ -540,7 +666,8 @@
                         <div style="font-size:11px;color:var(--text-muted);margin-bottom:12px;font-weight:500;">
                             Amigos (Investigadores), Miembros Nuevos y Miembros que Regresan
                         </div>
-                        <div id="agenda-amigos-modal" style="display:flex;flex-direction:column;gap:10px;margin-bottom:10px;"></div>
+                        <div id="agenda-amigos-modal"
+                            style="display:flex;flex-direction:column;gap:10px;margin-bottom:10px;"></div>
                         <button class="btn-add-card no-print" onclick="addAmigoItemModal()">
                             <i data-lucide="plus-circle" style="width:16px;height:16px;stroke-width:1.75;"></i>
                             Añadir ficha de seguimiento
@@ -582,16 +709,21 @@
                     </div>
                     <div class="agenda-section-body">
                         <div style="display:grid;gap:10px;">
-                            <div style="background:var(--color-50);border-radius:10px;padding:14px;border:1px solid var(--color-100);">
-                                <label class="field-label" style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
-                                    <i data-lucide="heart" style="width:13px;height:13px;stroke-width:2;color:var(--color-500);"></i>
+                            <div
+                                style="background:var(--color-50);border-radius:10px;padding:14px;border:1px solid var(--color-100);">
+                                <label class="field-label"
+                                    style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
+                                    <i data-lucide="heart"
+                                        style="width:13px;height:13px;stroke-width:2;color:var(--color-500);"></i>
                                     JustServe y Actividades
                                 </label>
                                 <input type="text" class="input-underlined">
                             </div>
                             <div style="background:#FFFBEB;border-radius:10px;padding:14px;border:1px solid #FDE68A;">
-                                <label class="field-label" style="display:flex;align-items:center;gap:6px;margin-bottom:8px;color:#92400E;">
-                                    <i data-lucide="share-2" style="width:13px;height:13px;stroke-width:2;color:#D97706;"></i>
+                                <label class="field-label"
+                                    style="display:flex;align-items:center;gap:6px;margin-bottom:8px;color:#92400E;">
+                                    <i data-lucide="share-2"
+                                        style="width:13px;height:13px;stroke-width:2;color:#D97706;"></i>
                                     Referencias y Misioneros de Barrio
                                 </label>
                                 <input type="text" class="input-underlined">
@@ -629,7 +761,8 @@
 
             <!-- Header PDF only -->
             <div class="institucional-header">
-                <div style="font-size:9pt;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4pt;">La Iglesia de Jesucristo de los Santos de los Últimos Días</div>
+                <div style="font-size:9pt;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4pt;">La Iglesia
+                    de Jesucristo de los Santos de los Últimos Días</div>
             </div>
 
             <!-- Modal Header -->
@@ -665,7 +798,8 @@
                     <div class="agenda-section-body">
                         <div style="margin-bottom:15px;">
                             <label class="field-label">Nombre del Candidato</label>
-                            <input type="text" class="input-underlined" style="font-size:18px;font-weight:700;color:var(--color-700);">
+                            <input type="text" class="input-underlined"
+                                style="font-size:18px;font-weight:700;color:var(--color-700);">
                         </div>
                         <div class="field-group cols-3">
                             <div>
@@ -719,11 +853,15 @@
                             <label class="field-label">Mensaje sobre el Bautismo (Discursante)</label>
                             <input type="text" class="input-underlined">
                         </div>
-                        
+
                         <!-- Divisor Ordenanza -->
-                        <div style="margin:20px 0;padding:15px;background:var(--color-50);border-radius:12px;border:1px dashed var(--color-200);text-align:center;">
-                            <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-600);margin-bottom:5px;">Acto Sagrado</div>
-                            <div style="font-size:16px;font-weight:800;color:var(--color-900);display:flex;align-items:center;justify-content:center;gap:10px;">
+                        <div
+                            style="margin:20px 0;padding:15px;background:var(--color-50);border-radius:12px;border:1px dashed var(--color-200);text-align:center;">
+                            <div
+                                style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-600);margin-bottom:5px;">
+                                Acto Sagrado</div>
+                            <div
+                                style="font-size:16px;font-weight:800;color:var(--color-900);display:flex;align-items:center;justify-content:center;gap:10px;">
                                 <i data-lucide="droplets" style="width:20px;height:20px;color:var(--color-500);"></i>
                                 Ordenanza del Bautismo
                             </div>
@@ -763,10 +901,14 @@
                         <div class="agenda-section-title" style="color:#475569;">Promesa y Testimonio</div>
                     </div>
                     <div class="agenda-section-body" style="text-align:center;padding:25px 15px;">
-                        <p style="font-size:14px;color:var(--text-secondary);font-style:italic;line-height:1.7;max-width:400px;margin:0 auto;">
-                            "Y ahora, ¿por qué te detienes? Levántate y bautízate, y lava tus pecados, invocando su nombre."
+                        <p
+                            style="font-size:14px;color:var(--text-secondary);font-style:italic;line-height:1.7;max-width:400px;margin:0 auto;">
+                            "Y ahora, ¿por qué te detienes? Levántate y bautízate, y lava tus pecados, invocando su
+                            nombre."
                         </p>
-                        <p style="font-size:12px;font-weight:700;color:var(--color-600);margin-top:10px;text-transform:uppercase;letter-spacing:0.05em;">— Hechos 22:16</p>
+                        <p
+                            style="font-size:12px;font-weight:700;color:var(--color-600);margin-top:10px;text-transform:uppercase;letter-spacing:0.05em;">
+                            — Hechos 22:16</p>
                     </div>
                 </div>
 
