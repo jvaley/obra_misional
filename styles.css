@@ -63,12 +63,14 @@ h5 {
     margin: 0;
 }
 
-/* Lucide SVG inline icons */
-[data-lucide],
-svg.lucide {
-    display: inline-block;
+/* Emoji Icon containers */
+.icon-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     vertical-align: middle;
     flex-shrink: 0;
+    line-height: 1;
 }
 
 /* Icon containers */
@@ -263,9 +265,9 @@ select.input-underlined {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--shadow-card);
-    transition: var(--transition);
     color: var(--color-600);
+    line-height: 1;
+    font-family: serif; /* Basic serif fonts often render emojis better than sans-serif in some contexts */
 }
 
 .icon-btn:hover .icon-btn-circle {
@@ -352,8 +354,9 @@ select.input-underlined {
     align-items: center;
     justify-content: center;
     color: var(--color-600);
-    font-size: 28px;
+    color: var(--color-600);
     transition: var(--transition);
+    line-height: 1;
 }
 
 .agenda-card:hover .agenda-card-icon {
@@ -443,8 +446,12 @@ select.input-underlined {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 26px;
     color: white;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-header-title {
@@ -479,6 +486,7 @@ select.input-underlined {
     color: white;
     cursor: pointer;
     transition: background 0.2s;
+    line-height: 1;
 }
 
 .modal-close-btn:hover {
@@ -580,7 +588,7 @@ select.input-underlined {
     text-transform: uppercase;
     color: var(--color-600);
     margin-bottom: 4px;
-    display: block;
+    display: inline-flex;
 }
 
 /* Tracking card for amigos */
@@ -602,20 +610,15 @@ select.input-underlined {
     position: absolute;
     top: 12px;
     right: 12px;
-    background: none;
-    border: none;
     color: var(--text-muted);
     cursor: pointer;
-    display: none;
     padding: 4px;
     border-radius: 99px;
     transition: var(--transition);
 }
 
 .tracking-card:hover .tracking-card-delete {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    opacity: 1;
 }
 
 .tracking-card-delete:hover {
@@ -752,8 +755,6 @@ select.input-underlined {
     footer,
     .modal-header-actions,
     button,
-    [data-lucide],
-    svg.lucide,
     .agenda-section-time {
         display: none !important;
     }

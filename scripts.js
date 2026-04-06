@@ -32,21 +32,21 @@ function addAmigoItemModal() {
 
     card.innerHTML = `
         <button class="tracking-card-delete no-print" onclick="this.closest('.tracking-card').remove()" title="Eliminar">
-            <i data-lucide="trash-2" style="width:15px;height:15px;stroke-width:1.75;color:#EF4444;"></i>
+            <span style="font-size:14px;">🗑️</span>
         </button>
 
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
             <div style="display:flex;flex-direction:column;gap:12px;">
                 <div>
                     <label style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#0054D1;display:flex;align-items:center;gap:5px;margin-bottom:5px;">
-                        <i data-lucide="user" style="width:12px;height:12px;stroke-width:2;"></i>
+                        <span style="font-size:12px;margin-right:4px;">👤</span>
                         Persona / Familia
                     </label>
                     <input type="text" class="input-underlined" style="font-weight:600;">
                 </div>
                 <div>
                     <label style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#0054D1;display:flex;align-items:center;gap:5px;margin-bottom:5px;">
-                        <i data-lucide="trending-up" style="width:12px;height:12px;stroke-width:2;"></i>
+                        <span style="font-size:12px;margin-right:4px;">📈</span>
                         Estado de Progreso
                     </label>
                     <select class="input-underlined" style="background:transparent;">
@@ -58,7 +58,7 @@ function addAmigoItemModal() {
                 </div>
                 <div>
                     <label style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#0054D1;display:flex;align-items:center;gap:5px;margin-bottom:5px;">
-                        <i data-lucide="flag" style="width:12px;height:12px;stroke-width:2;"></i>
+                        <span style="font-size:12px;margin-right:4px;">🚩</span>
                         Próxima Meta / Ordenanza
                     </label>
                     <input type="date" class="input-underlined" style="color:#0041A3;">
@@ -67,21 +67,21 @@ function addAmigoItemModal() {
             <div style="display:flex;flex-direction:column;gap:12px;">
                 <div>
                     <label style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#0054D1;display:flex;align-items:center;gap:5px;margin-bottom:5px;">
-                        <i data-lucide="calendar" style="width:12px;height:12px;stroke-width:2;"></i>
+                        <span style="font-size:12px;margin-right:4px;">📅</span>
                         Siguiente Cita / Lección
                     </label>
                     <input type="datetime-local" class="input-underlined">
                 </div>
                 <div>
                     <label style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#0054D1;display:flex;align-items:center;gap:5px;margin-bottom:5px;">
-                        <i data-lucide="car" style="width:12px;height:12px;stroke-width:2;"></i>
+                        <span style="font-size:12px;margin-right:4px;">🚗</span>
                         Coordinación con el Barrio
                     </label>
                     <input type="text" class="input-underlined">
                 </div>
                 <div>
                     <label style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#0054D1;display:flex;align-items:center;gap:5px;margin-bottom:5px;">
-                        <i data-lucide="file-text" style="width:12px;height:12px;stroke-width:2;"></i>
+                        <span style="font-size:12px;margin-right:4px;">📝</span>
                         Notas
                     </label>
                     <textarea class="input-underlined" rows="1" style="resize:none;"></textarea>
@@ -96,7 +96,7 @@ function addAmigoItemModal() {
     container.appendChild(card);
 
     // Registrar iconos de Lucide en el nuevo elemento
-    if (window.lucide) window.lucide.createIcons({ nodes: [card] });
+
 
     requestAnimationFrame(() => {
         card.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
@@ -126,19 +126,14 @@ function addRow() {
         </td>
         <td style="padding:11px 12px;text-align:center;" class="no-print">
             <button onclick="this.closest('tr').remove()" class="btn-delete-row" title="Eliminar acción">
-                <i data-lucide="trash-2" style="width:14px;height:14px;color:#EF4444;"></i>
+                <span style="font-size:14px;">🗑️</span>
             </button>
         </td>
     `;
     
     tableBody.appendChild(row);
     
-    // Reinicializar iconos para la nueva fila
-    if (window.lucide) {
-        window.lucide.createIcons({
-            nodes: [row]
-        });
-    }
+
 }
 
 // --- EXPORTACIÓN PDF DIRECTA ---
@@ -216,7 +211,7 @@ async function previewPDF(elementId, fileName) {
     `);
     iframe.contentDocument.close();
 
-    window.lucide && window.lucide.createIcons({ nodes: [iframe.contentDocument.body] });
+
 
     // === CORRECCIONES DOM PARA EL PDF ===
     const iDoc = iframe.contentDocument;
@@ -324,8 +319,7 @@ window.addEventListener('DOMContentLoaded', () => {
     updateProgress('lecciones', 12);
     updateProgress('ref', 10);
 
-    // Inicializar iconos Lucide
-    if (window.lucide) window.lucide.createIcons();
+
 
     // Primera ficha vacía al abrir el modal
     document.getElementById('modal-agenda-coordinacion')
