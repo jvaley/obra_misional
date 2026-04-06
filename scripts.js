@@ -107,24 +107,38 @@ function addAmigoItemModal() {
 
 // --- MATRIZ DE ACCIONES ---
 function addRow() {
-    const body = document.getElementById('actions-table');
-    const row = body.insertRow();
+    const tableBody = document.getElementById('actions-table');
+    const row = document.createElement('tr');
     row.style.borderBottom = '1px solid var(--color-50)';
-    row.style.animation = 'none';
+
     row.innerHTML = `
-        <td style="padding:11px 12px;">
-            <textarea placeholder="Nueva acción o tarea..." style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;" rows="2"></textarea>
+        <td style="padding:11px 12px;" data-label="Acción">
+            <textarea style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;" rows="2" placeholder="Nueva acción..."></textarea>
         </td>
-        <td style="padding:12px;">
-            <input type="text" placeholder="Responsable" style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;">
+        <td style="padding:11px 12px;" data-label="Responsable">
+            <input type="text" style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;" placeholder="Responsable">
         </td>
-        <td style="padding:12px;">
+        <td style="padding:11px 12px;" data-label="Plazo">
             <input type="date" style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;">
         </td>
-        <td style="padding:12px;text-align:center;">
-            <input type="checkbox" style="width:16px;height:16px;accent-color:var(--color-500);">
+        <td style="padding:11px 12px;text-align:center;" data-label="Hecho">
+            <input type="checkbox" style="width:15px;height:15px;accent-color:var(--color-500);">
+        </td>
+        <td style="padding:11px 12px;text-align:center;" class="no-print">
+            <button onclick="this.closest('tr').remove()" class="btn-delete-row" title="Eliminar acción">
+                <i data-lucide="trash-2" style="width:14px;height:14px;color:#EF4444;"></i>
+            </button>
         </td>
     `;
+    
+    tableBody.appendChild(row);
+    
+    // Reinicializar iconos para la nueva fila
+    if (window.lucide) {
+        window.lucide.createIcons({
+            nodes: [row]
+        });
+    }
 }
 
 // --- EXPORTACIÓN PDF DIRECTA ---

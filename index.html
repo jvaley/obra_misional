@@ -213,149 +213,195 @@
                         Nueva acción
                     </button>
                 </div>
-                <div style="overflow-x:auto;">
-                    <table style="width:100%;border-collapse:collapse;">
+                <div class="table-responsive">
+                    <table class="actions-table" style="width:100%;border-collapse:collapse;">
                         <thead>
                             <tr style="border-bottom:1px solid var(--border);">
                                 <th
-                                    style="text-align:left;padding:8px 12px;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);width:45%;">
+                                    style="text-align:left;padding:8px 12px;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);width:55%;">
                                     Acción</th>
                                 <th
-                                    style="text-align:left;padding:8px 12px;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);">
+                                    style="text-align:left;padding:8px 12px;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);width:20%;">
                                     Responsable</th>
                                 <th
-                                    style="text-align:left;padding:8px 12px;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);">
+                                    style="text-align:left;padding:8px 12px;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);width:15%;">
                                     Plazo</th>
                                 <th
                                     style="text-align:center;padding:8px 12px;font-size:10px;font-weight:700;color:var(--text-muted);">
                                     ✓</th>
+                                <th style="width:40px;" class="no-print"></th>
                             </tr>
                         </thead>
                         <tbody id="actions-table">
                             <!-- 1 -->
                             <tr style="border-bottom:1px solid var(--color-50);">
-                                <td style="padding:11px 12px;"><textarea
+                                <td style="padding:11px 12px;" data-label="Acción"><textarea
                                         style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;"
                                         rows="2">Ver a detalle cada miembro de la senda de los convenios</textarea></td>
-                                <td style="padding:11px 12px;"><input type="text"
+                                <td style="padding:11px 12px;" data-label="Responsable"><input type="text"
                                         style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;">
                                 </td>
-                                <td style="padding:11px 12px;"><input type="date"
+                                <td style="padding:11px 12px;" data-label="Plazo"><input type="date"
                                         style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;">
                                 </td>
-                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox"
-                                        style="width:15px;height:15px;accent-color:var(--color-500);"></td>
+                                <td style="padding:11px 12px;text-align:center;" data-label="Hecho"><input
+                                        type="checkbox" style="width:15px;height:15px;accent-color:var(--color-500);">
+                                </td>
+                                <td style="padding:11px 12px;text-align:center;" class="no-print">
+                                    <button onclick="this.closest('tr').remove()" class="btn-delete-row" title="Eliminar acción">
+                                        <i data-lucide="trash-2" style="width:14px;height:14px;color:#EF4444;"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <!-- 2 -->
                             <tr style="border-bottom:1px solid var(--color-50);">
-                                <td style="padding:11px 12px;"><textarea
+                                <td style="padding:11px 12px;" data-label="Acción"><textarea
                                         style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;"
                                         rows="3">Por mes tener una actividad misional de barrio que sea en rotación por organización el líder misional se encarga de distribuir la asignación de actividad.</textarea>
                                 </td>
-                                <td style="padding:11px 12px;"><input type="text"
+                                <td style="padding:11px 12px;" data-label="Responsable"><input type="text"
                                         style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;">
                                 </td>
-                                <td style="padding:11px 12px;"><input type="date"
+                                <td style="padding:11px 12px;" data-label="Plazo"><input type="date"
                                         style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;">
                                 </td>
-                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox"
-                                        style="width:15px;height:15px;accent-color:var(--color-500);"></td>
+                                <td style="padding:11px 12px;text-align:center;" data-label="Hecho"><input
+                                        type="checkbox" style="width:15px;height:15px;accent-color:var(--color-500);">
+                                </td>
+                                <td style="padding:11px 12px;text-align:center;" class="no-print">
+                                    <button onclick="this.closest('tr').remove()" class="btn-delete-row" title="Eliminar acción">
+                                        <i data-lucide="trash-2" style="width:14px;height:14px;color:#EF4444;"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <!-- 3 -->
                             <tr style="border-bottom:1px solid var(--color-50);">
-                                <td style="padding:11px 12px;"><textarea
+                                <td style="padding:11px 12px;" data-label="Acción"><textarea
                                         style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;"
                                         rows="2">Salir con los misioneros - Misioneros preparados</textarea></td>
-                                <td style="padding:11px 12px;"><input type="text"
+                                <td style="padding:11px 12px;" data-label="Responsable"><input type="text"
                                         style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;">
                                 </td>
-                                <td style="padding:11px 12px;"><input type="date"
+                                <td style="padding:11px 12px;" data-label="Plazo"><input type="date"
                                         style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;">
                                 </td>
-                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox"
-                                        style="width:15px;height:15px;accent-color:var(--color-500);"></td>
+                                <td style="padding:11px 12px;text-align:center;" data-label="Hecho"><input
+                                        type="checkbox" style="width:15px;height:15px;accent-color:var(--color-500);">
+                                </td>
+                                <td style="padding:11px 12px;text-align:center;" class="no-print">
+                                    <button onclick="this.closest('tr').remove()" class="btn-delete-row" title="Eliminar acción">
+                                        <i data-lucide="trash-2" style="width:14px;height:14px;color:#EF4444;"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <!-- 4 -->
                             <tr style="border-bottom:1px solid var(--color-50);">
-                                <td style="padding:11px 12px;"><textarea
+                                <td style="padding:11px 12px;" data-label="Acción"><textarea
                                         style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;"
                                         rows="2">Fortalecer la enseñanza de los principios para los miembros</textarea>
                                 </td>
-                                <td style="padding:11px 12px;"><input type="text"
+                                <td style="padding:11px 12px;" data-label="Responsable"><input type="text"
                                         style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;">
                                 </td>
-                                <td style="padding:11px 12px;"><input type="date"
+                                <td style="padding:11px 12px;" data-label="Plazo"><input type="date"
                                         style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;">
                                 </td>
-                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox"
-                                        style="width:15px;height:15px;accent-color:var(--color-500);"></td>
+                                <td style="padding:11px 12px;text-align:center;" data-label="Hecho"><input
+                                        type="checkbox" style="width:15px;height:15px;accent-color:var(--color-500);">
+                                </td>
+                                <td style="padding:11px 12px;text-align:center;" class="no-print">
+                                    <button onclick="this.closest('tr').remove()" class="btn-delete-row" title="Eliminar acción">
+                                        <i data-lucide="trash-2" style="width:14px;height:14px;color:#EF4444;"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <!-- 5 -->
                             <tr style="border-bottom:1px solid var(--color-50);">
-                                <td style="padding:11px 12px;"><textarea
+                                <td style="padding:11px 12px;" data-label="Acción"><textarea
                                         style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;"
                                         rows="2">Impartir cada domingo la clase principios del evangelio</textarea></td>
-                                <td style="padding:11px 12px;"><input type="text"
+                                <td style="padding:11px 12px;" data-label="Responsable"><input type="text"
                                         style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;">
                                 </td>
-                                <td style="padding:11px 12px;"><input type="date"
+                                <td style="padding:11px 12px;" data-label="Plazo"><input type="date"
                                         style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;">
                                 </td>
-                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox"
-                                        style="width:15px;height:15px;accent-color:var(--color-500);"></td>
+                                <td style="padding:11px 12px;text-align:center;" data-label="Hecho"><input
+                                        type="checkbox" style="width:15px;height:15px;accent-color:var(--color-500);">
+                                </td>
+                                <td style="padding:11px 12px;text-align:center;" class="no-print">
+                                    <button onclick="this.closest('tr').remove()" class="btn-delete-row" title="Eliminar acción">
+                                        <i data-lucide="trash-2" style="width:14px;height:14px;color:#EF4444;"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <!-- 6 -->
                             <tr style="border-bottom:1px solid var(--color-50);">
-                                <td style="padding:11px 12px;"><textarea
+                                <td style="padding:11px 12px;" data-label="Acción"><textarea
                                         style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;"
                                         rows="3">En cada reunion de consejo de barrio recibir dos referencias por organización, en el drive hay un documento.</textarea>
                                 </td>
-                                <td style="padding:11px 12px;"><input type="text"
+                                <td style="padding:11px 12px;" data-label="Responsable"><input type="text"
                                         style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;">
                                 </td>
-                                <td style="padding:11px 12px;"><input type="date"
+                                <td style="padding:11px 12px;" data-label="Plazo"><input type="date"
                                         style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;">
                                 </td>
-                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox"
-                                        style="width:15px;height:15px;accent-color:var(--color-500);"></td>
+                                <td style="padding:11px 12px;text-align:center;" data-label="Hecho"><input
+                                        type="checkbox" style="width:15px;height:15px;accent-color:var(--color-500);">
+                                </td>
+                                <td style="padding:11px 12px;text-align:center;" class="no-print">
+                                    <button onclick="this.closest('tr').remove()" class="btn-delete-row" title="Eliminar acción">
+                                        <i data-lucide="trash-2" style="width:14px;height:14px;color:#EF4444;"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <!-- 7 -->
                             <tr style="border-bottom:1px solid var(--color-50);">
-                                <td style="padding:11px 12px;"><textarea
+                                <td style="padding:11px 12px;" data-label="Acción"><textarea
                                         style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;"
                                         rows="4">Que los misioneros tengan un documento donde estén las parejas ministrantes de cada hermano. Por trimestre ver que familias se van a enfocar para activar Q. Elderes y Soc. Soc. (6 familias).</textarea>
                                 </td>
-                                <td style="padding:11px 12px;"><input type="text"
+                                <td style="padding:11px 12px;" data-label="Responsable"><input type="text"
                                         style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;">
                                 </td>
-                                <td style="padding:11px 12px;"><input type="date"
+                                <td style="padding:11px 12px;" data-label="Plazo"><input type="date"
                                         style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;">
                                 </td>
-                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox"
-                                        style="width:15px;height:15px;accent-color:var(--color-500);"></td>
+                                <td style="padding:11px 12px;text-align:center;" data-label="Hecho"><input
+                                        type="checkbox" style="width:15px;height:15px;accent-color:var(--color-500);">
+                                </td>
+                                <td style="padding:11px 12px;text-align:center;" class="no-print">
+                                    <button onclick="this.closest('tr').remove()" class="btn-delete-row" title="Eliminar acción">
+                                        <i data-lucide="trash-2" style="width:14px;height:14px;color:#EF4444;"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <!-- 8 -->
                             <tr style="border-bottom:1px solid var(--color-50);">
-                                <td style="padding:11px 12px;"><textarea
+                                <td style="padding:11px 12px;" data-label="Acción"><textarea
                                         style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--text-primary);background:transparent;resize:none;"
                                         rows="3">Calendario de las noches de hogar con los misioneros. La familia que tenga mas noches de hogar obtiene un presente.</textarea>
                                 </td>
-                                <td style="padding:11px 12px;"><input type="text"
+                                <td style="padding:11px 12px;" data-label="Responsable"><input type="text"
                                         style="width:100%;border:none;outline:none;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-secondary);background:transparent;">
                                 </td>
-                                <td style="padding:11px 12px;"><input type="date"
+                                <td style="padding:11px 12px;" data-label="Plazo"><input type="date"
                                         style="font-family:'Montserrat',sans-serif;font-size:11px;border:none;outline:none;color:var(--text-muted);background:transparent;">
                                 </td>
-                                <td style="padding:11px 12px;text-align:center;"><input type="checkbox"
-                                        style="width:15px;height:15px;accent-color:var(--color-500);"></td>
+                                <td style="padding:11px 12px;text-align:center;" data-label="Hecho"><input
+                                        type="checkbox" style="width:15px;height:15px;accent-color:var(--color-500);">
+                                </td>
+                                <td style="padding:11px 12px;text-align:center;" class="no-print">
+                                    <button onclick="this.closest('tr').remove()" class="btn-delete-row" title="Eliminar acción">
+                                        <i data-lucide="trash-2" style="width:14px;height:14px;color:#EF4444;"></i>
+                                    </button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-        </section>
-
-        <!-- FOOTER -->
         <div class="no-print"
             style="display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--border);flex-wrap:wrap;gap:10px;">
             <div style="display:flex;gap:16px;align-items:center;">

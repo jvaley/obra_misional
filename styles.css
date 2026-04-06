@@ -979,10 +979,10 @@ select.input-underlined {
     background: transparent !important;
 }
 
-.is-exporting-pdf h1, 
-.is-exporting-pdf h2, 
-.is-exporting-pdf h3, 
-.is-exporting-pdf p, 
+.is-exporting-pdf h1,
+.is-exporting-pdf h2,
+.is-exporting-pdf h3,
+.is-exporting-pdf p,
 .is-exporting-pdf span,
 .is-exporting-pdf label,
 .is-exporting-pdf input {
@@ -990,16 +990,16 @@ select.input-underlined {
 }
 
 /* Lógica de ocultar secciones automáticas */
-.is-exporting-plan #section-liderazgo, 
-.is-exporting-plan #section-agendas { 
-    display: none !important; 
+.is-exporting-plan #section-liderazgo,
+.is-exporting-plan #section-agendas {
+    display: none !important;
 }
 
 /* Evitar que las secciones se corten entre hojas */
-.is-exporting-pdf .card, 
-.is-exporting-pdf .tracking-card, 
-.is-exporting-pdf .agenda-section, 
-.is-exporting-pdf .metas-container, 
+.is-exporting-pdf .card,
+.is-exporting-pdf .tracking-card,
+.is-exporting-pdf .agenda-section,
+.is-exporting-pdf .metas-container,
 .is-exporting-pdf .program-divider {
     break-inside: avoid !important;
     page-break-inside: avoid !important;
@@ -1013,7 +1013,7 @@ select.input-underlined {
 }
 
 /* Títulos de secciones en el PDF */
-.is-exporting-pdf .section-header, 
+.is-exporting-pdf .section-header,
 .is-exporting-pdf .section-label {
     color: black !important;
     font-weight: 700 !important;
@@ -1023,30 +1023,30 @@ select.input-underlined {
 }
 
 /* Matriz de acciones - Ancho completo */
-.is-exporting-pdf #section-matriz { 
-    width: 100% !important; 
-    margin: 0 !important; 
+.is-exporting-pdf #section-matriz {
+    width: 100% !important;
+    margin: 0 !important;
 }
 
-.is-exporting-pdf table { 
-    width: 100% !important; 
-    border-collapse: collapse; 
+.is-exporting-pdf table {
+    width: 100% !important;
+    border-collapse: collapse;
 }
 
-.is-exporting-pdf th, 
-.is-exporting-pdf td { 
-    border: 1px solid #CBD5E1 !important; 
-    padding: 8pt !important; 
-    text-align: left !important; 
+.is-exporting-pdf th,
+.is-exporting-pdf td {
+    border: 1px solid #CBD5E1 !important;
+    padding: 8pt !important;
+    text-align: left !important;
 }
 
-.is-exporting-pdf th { 
-    background-color: #F8FAFC !important; 
-    color: black !important; 
+.is-exporting-pdf th {
+    background-color: #F8FAFC !important;
+    color: black !important;
 }
 
-.is-exporting-pdf input, 
-.is-exporting-pdf textarea, 
+.is-exporting-pdf input,
+.is-exporting-pdf textarea,
 .is-exporting-pdf select {
     color: black !important;
     border-bottom: 1px solid #CBD5E1 !important;
@@ -1088,5 +1088,91 @@ select.input-underlined {
 
     .agenda-card {
         width: 140px;
+    }
+}
+
+/* =====================================================
+   ESTILOS ADICIONALES PARA MATRIZ & RESPONSIVE
+   ===================================================== */
+.btn-delete-row {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    opacity: 0.5;
+}
+
+.btn-delete-row:hover {
+    background-color: #FEF2F2;
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 820px) {
+    .actions-table, .actions-table tbody, .actions-table tr, .actions-table td {
+        display: block;
+        width: 100%;
+    }
+    .actions-table thead {
+        display: none;
+    }
+    .actions-table tr {
+        margin-bottom: 16px;
+        border: 1px solid var(--color-50) !important;
+        border-radius: var(--radius-md);
+        padding: 12px;
+        background: #fafafa;
+    }
+    .actions-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0 !important;
+        border-bottom: 1px solid #eee;
+    }
+    .actions-table td:last-child {
+        border-bottom: none;
+    }
+    .actions-table td::before {
+        content: attr(data-label);
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        min-width: 100px;
+    }
+    .actions-table td textarea,
+    .actions-table td input[type="text"] {
+        text-align: right;
+        width: 100% !important;
+    }
+    .actions-table td[data-label="Acción"] {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .actions-table td[data-label="Acción"] textarea {
+        text-align: left !important;
+        background: white;
+        padding: 10px;
+        border: 1px solid var(--color-50);
+        margin-top: 8px;
+    }
+    .btn-delete-row {
+        opacity: 1;
+        width: 100%;
+        margin-top: 10px;
+        background-color: #FEF2F2;
+        padding: 10px;
     }
 }
